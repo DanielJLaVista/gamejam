@@ -21,6 +21,14 @@ namespace MonoGameLibrary.Input {
         }
 
         /// <summary>
+        /// Updates the state information about keyboard input.
+        /// </summary>
+        public void Update() {
+            PreviousState = CurrentState;
+            CurrentState = Keyboard.GetState ();
+        }
+
+        /// <summary>
         /// Returns a value that indicates if the specified key is currently down.
         /// </summary>
         /// <param name="key">The key to check.</param>
